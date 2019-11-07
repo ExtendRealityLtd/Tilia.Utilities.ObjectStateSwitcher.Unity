@@ -1,7 +1,7 @@
 [![Tilia logo][Tilia-Image]](#)
 
-> ### Tilia {scope} {feature} {platform?}
-> {Description of feature}.
+> ### Utilities -> Object State Switcher for the Unity Software
+> Manages the activation state of a Unity GameObject collection and ensures only one Unity GameObject is active at any time.
 
 [![Release][Version-Release]][Releases]
 [![License][License-Badge]][License]
@@ -9,9 +9,13 @@
 
 ## Introduction
 
-{Introduction into the purpose of the feature.}
+The Object State Switcher prefab provides the ability to specify a collection of [Unity] GameObjects and decide the target active state via a visual screen user interface.
 
-> **Requires** {platform and minimum version number}.
+An example would be to have a collection of GameObjects and only have one of the GameObjects in the collection active at any one time in the scene. When the switcher index is changed then that new given index becomes the active GameObject and all of the other GameObjects in the collection become deactivated.
+
+This prefab utilizes the `GameObjectStateSwitcher` component from [Zinnia] and adds a Unity UI in screen space for controlling the activated GameObject by simply clicking on the UI buttons to switch active GameObject.
+
+> **Requires** the Unity software version `2018.3.10f1` (or above).
 
 ## Getting Started
 
@@ -35,9 +39,9 @@ Please refer to the Extend Reality [Code of Conduct].
 
 Code released under the [MIT License][License].
 
-[License-Badge]: https://img.shields.io/github/license/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}.svg
-[Version-Release]: https://img.shields.io/github/release/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}.svg
-[project coding conventions]: https://github.com/ExtendRealityLtd/.github/blob/master/CONVENTIONS/{project_type}
+[License-Badge]: https://img.shields.io/github/license/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity.svg
+[Version-Release]: https://img.shields.io/github/release/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity.svg
+[project coding conventions]: https://github.com/ExtendRealityLtd/.github/blob/master/CONVENTIONS/UNITY3D.md
 
 [Tilia-Image]: https://user-images.githubusercontent.com/1029673/67681496-5bf10700-f985-11e9-9413-e61801b6eab5.png
 [License]: LICENSE.md
@@ -49,3 +53,6 @@ Code released under the [MIT License][License].
 [Releases]: ../../releases
 [Contributing guidelines]: https://github.com/ExtendRealityLtd/.github/blob/master/CONTRIBUTING.md
 [Code of Conduct]: https://github.com/ExtendRealityLtd/.github/blob/master/CODE_OF_CONDUCT.md
+
+[Unity]: https://unity3d.com/
+[Zinnia]: https://github.com/ExtendRealityLtd/Zinnia.Unity
