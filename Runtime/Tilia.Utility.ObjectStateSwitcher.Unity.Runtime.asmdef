@@ -1,0 +1,19 @@
+{
+    "name": "Tilia.Utility.ObjectStateSwitcher.Unity.Runtime",
+    "references": [
+        "Zinnia.Runtime"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Malimbe.PropertySerializationAttribute.dll",
+        "Malimbe.XmlDocumentationAttribute.dll",
+        "Malimbe.BehaviourStateRequirementMethod.dll",
+        "Malimbe.MemberClearanceMethod.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

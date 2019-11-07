@@ -1,20 +1,23 @@
 {
-    "name": "io.extendreality.tilia.{scope}.{feature}.{platform?}",
-    "displayName": "Tilia {scope}.{feature}.{platform?}",
-    "description": "{Description of feature.}",
+    "name": "io.extendreality.tilia.utilities.objectstateswitcher.unity",
+    "displayName": "Tilia Utilities ObjectStateSwitcher Unity",
+    "description": "Manages the activation state of a Unity GameObject collection and ensures only one Unity GameObject is active at any time.",
     "version": "1.0.0",
     "unity": "2018.3",
     "unityRelease": "10f1",
     "keywords": [
-        "pattern"
+        "switcher",
+        "utility",
+        "state",
+        "gameobject"
     ],
-    "homepage": "https://github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}/",
+    "homepage": "https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/",
     "bugs": {
-        "url": "https://github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}/issues"
+        "url": "https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/issues"
     },
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}.git"
+        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity.git"
     },
     "license": "MIT",
     "author": {
@@ -23,7 +26,7 @@
         "url": "https://github.com/ExtendRealityLtd"
     },
     "dependencies": {
-        "io.extendreality.zinnia.unity": "X.Y.Z"
+        "io.extendreality.zinnia.unity": "1.8.0"
     },
     "files": [
         "*.md",
