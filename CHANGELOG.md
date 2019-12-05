@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v1.0.2...v1.1.0) (2019-12-05)
+
+#### Features
+
+* **UIButtonBuilder:** expose cached index operations ([8c045a3](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/commit/8c045a3ee716e9fb9ed095c1e07fe15371aba7a9))
+  > The CachedIndex can now be accessed via the `TryGetCachedIndex` method which will return the current cached index for the selected item if one has been set, otherwise the method will return false.
+  > 
+  > The `SwitchTo(int index)` method has also been exposed publicly so switching can happen programatically on the component and the relevant index cache is updated accordingly.
+  > 
+  > The `SwitchToCachedIndex` method also now has a `defaultWhenNoCachedIndex` optional parameter which can be used as the index to actually switch to if no cached index is present.
+  > 
+  > The prefab has been updated to use this new `SwitchToCachedIndex` method when the prefab is enabled.
+
 ### [1.0.2](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v1.0.1...v1.0.2) (2019-12-02)
 
 #### Miscellaneous Chores
