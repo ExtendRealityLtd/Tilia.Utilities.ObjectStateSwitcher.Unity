@@ -69,13 +69,34 @@
         protected static Dictionary<string, int> cachedIndexCollection = new Dictionary<string, int>();
 
         /// <summary>
+        /// Switches the <see cref="Switcher"/> to the given index.
+        /// </summary>
+        /// <param name="index">The index to switch to.</param>
+        [RequiresBehaviourState]
+        public virtual void SwitchTo(int index)
+        {
+            Switcher.SwitchTo(index);
+            cachedIndexCollection[Switcher.name] = index;
+        }
+
+        /// <summary>
+        /// Attempts to receive the cached index for the current switcher.
+        /// </summary>
+        /// <param name="cachedIndex">The reference to the found cached index.</param>
+        /// <returns>Whether a cached index was found.</returns>
+        public virtual bool TryGetCachedIndex(out int cachedIndex)
+        {
+            return cachedIndexCollection.TryGetValue(Switcher.name, out cachedIndex);
+        }
+
+        /// <summary>
         /// Switches the <see cref="Switcher"/> to the current cached index.
         /// </summary>
+        /// <param name="defaultWhenNoCachedIndex">The index to switch to if no cached index is present.</param>
         [RequiresBehaviourState]
-        public virtual void SwitchToCachedIndex()
+        public virtual void SwitchToCachedIndex(int defaultWhenNoCachedIndex = 0)
         {
-            cachedIndexCollection.TryGetValue(Switcher.name, out int cachedIndex);
-            SwitchTo(cachedIndex);
+            SwitchTo(TryGetCachedIndex(out int cachedIndex) ? cachedIndex : defaultWhenNoCachedIndex);
         }
 
         /// <summary>
@@ -124,16 +145,6 @@
         protected virtual void Awake()
         {
             panelSize = ContainerRect.sizeDelta;
-        }
-
-        /// <summary>
-        /// Switches the <see cref="Switcher"/> to the given index.
-        /// </summary>
-        /// <param name="index">The index to switch to.</param>
-        protected virtual void SwitchTo(int index)
-        {
-            Switcher.SwitchTo(index);
-            cachedIndexCollection[Switcher.name] = index;
         }
 
         /// <summary>
