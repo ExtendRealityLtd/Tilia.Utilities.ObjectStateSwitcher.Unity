@@ -1,4 +1,4 @@
-# Adding A Tracked Alias
+# Adding An Object State Switcher
 
 > * Level: Beginner
 >
@@ -8,7 +8,7 @@
 
 ## Introduction
 
-The Object State Switcher prefab allows for the active state of multiple GameObjects to be switched between via a screen space user interface.
+The `Object State Switcher` prefab allows for the active state of multiple GameObjects to be switched between via a screen space user interface.
 
 In this guide, we'll learn how to use the ObjectStateSwitcher prefab to manually switch between different CameraRigs within the scene.
 
@@ -16,8 +16,6 @@ In this guide, we'll learn how to use the ObjectStateSwitcher prefab to manually
 
 ## Prerequisites
 
-* [Add the Tilia.CameraRigs.SpatialSimulator.Unity] prefab to the scene Hierarchy.
-* [Add the Tilia.CameraRigs.UnityXR] prefab to the scene Hierarchy.
 * [Add the Tilia.CameraRigs.TrackedAlias.Unity] prefab to the scene Hierarchy.
 * [Install the Tilia.Utilities.ObjectStateSwitcher.Unity] package dependency in to your [Unity] project.
 
@@ -39,15 +37,17 @@ Select the `Utilities.ObjectStateSwitcher` GameObject in the Unity Hierarchy win
 
 ### Step 3
 
-Drag and drop the `CameraRigs.SpatialSimulator` GameObject from the Unity Hierarchy window into the newly displayed Element `0` field within the `Elements` parameter on the `Game Object State Switcher` component.
+Drag and drop the `CameraRigs.SpatialSimulator` GameObject from the Unity Hierarchy window into the newly displayed `Element 0` field within the `Target` property on the `Game Object State Switcher` component.
 
 ![Drag And Drop Spatial Simulator Into ObjectStateSwitcher](assets/images/DragAndDropSpatialSimulatorIntoObjectStateSwitcher.png)
 
 ### Step 4
 
-Drag and drop the `CameraRigs.UnityXR` GameObject from the Unity Hierarchy window into the newly displayed Element `1` field within the `Elements` parameter on the `Game Object State Switcher` component. Ensure both CameraRigs are active in the scene as the Object State Switcher prefab will ensure only one is active at runtime.
+Drag and drop the `CameraRigs.UnityXR` GameObject from the Unity Hierarchy window into the newly displayed `Element 1` field within the `Target` property on the `Game Object State Switcher` component.
 
 ![Drag And Drop UnityXR Into ObjectStateSwitcher](assets/images/DragAndDropUnityXRIntoObjectStateSwitcher.png)
+
+Ensure both CameraRigs are active in the scene as the Object State Switcher prefab will ensure only one is active at runtime.
 
 ### Done
 
@@ -59,8 +59,6 @@ Now unlock the mouse pointer from the Unity Game window by pressing the Lock tog
 
 ![Switch To SpatialSimulator CameraRig](assets/images/SwitchToSpatialSimulatorCameraRig.png)
 
-[Add the Tilia.CameraRigs.SpatialSimulator.Unity]: https://github.com/ExtendRealityLtd/Tilia.CameraRigs.SpatialSimulator.Unity/blob/master/Documentation/HowToGuides/AddingASpatialSimulatorCameraRig/README.md
-[Add the Tilia.CameraRigs.UnityXR]: https://github.com/ExtendRealityLtd/Tilia.CameraRigs.UnityXR/blob/master/Documentation/HowToGuides/AddingAUnityXRCameraRig/README.md
 [Add the Tilia.CameraRigs.TrackedAlias.Unity]: https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/blob/master/Documentation/HowToGuides/AddingATrackedAlias/README.md
 [Install the Tilia.Utilities.ObjectStateSwitcher.Unity]: ../Installation/README.md
 [Unity]: https://unity3d.com/
