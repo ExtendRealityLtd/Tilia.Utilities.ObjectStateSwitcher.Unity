@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v1.1.11...v1.2.0) (2020-07-03)
+
+#### Features
+
+* **API:** add auto-generated API documentation ([29b44db](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/commit/29b44db45ce530ffb87ca66edc68a086960c5875))
+  > The API documentation is auto generated with docfx and converted to markdown via turndown in a custom nodejs script.
+
+#### Bug Fixes
+
+* **package.json:** add docfx.json file ([87b6b23](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/commit/87b6b230026f274c42dbd1e38a0940bce23e658f))
+  > The docfx.json file was missing from the package.json causing the build process to fail. It has now been added.
+
 ### [1.1.11](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v1.1.10...v1.1.11) (2020-06-21)
 
 #### Bug Fixes
