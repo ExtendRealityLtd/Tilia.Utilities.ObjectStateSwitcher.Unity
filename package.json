@@ -2,7 +2,7 @@
     "name": "io.extendreality.tilia.utilities.objectstateswitcher.unity",
     "displayName": "Tilia Utilities ObjectStateSwitcher Unity",
     "description": "Manages the activation state of a Unity GameObject collection and ensures only one Unity GameObject is active at any time.",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "unity": "2018.3",
     "unityRelease": "10f1",
     "keywords": [
