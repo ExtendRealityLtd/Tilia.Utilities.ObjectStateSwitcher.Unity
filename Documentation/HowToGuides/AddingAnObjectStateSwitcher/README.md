@@ -8,7 +8,7 @@
 
 ## Introduction
 
-The `Object State Switcher` prefab allows for the active state of multiple GameObjects to be switched between via a screen space user interface.
+The `Utilities.ObjectStateSwitcher` prefab allows for the active state of multiple GameObjects to be switched between via a screen space user interface.
 
 In this guide, we'll learn how to use the ObjectStateSwitcher prefab to manually switch between different CameraRigs within the scene.
 
@@ -16,14 +16,14 @@ In this guide, we'll learn how to use the ObjectStateSwitcher prefab to manually
 
 ## Prerequisites
 
-* [Add the Tilia.CameraRigs.TrackedAlias.Unity] prefab to the scene Hierarchy.
+* [Add the Tilia.CameraRigs.TrackedAlias.Unity -> CameraRigs.TrackedAlias] prefab to the scene hierarchy.
 * [Install the Tilia.Utilities.ObjectStateSwitcher.Unity] package dependency in to your [Unity] project.
 
 ## Let's Start
 
 ### Step 1
 
-Expand the `Tilia Utilities ObjectStateSwitcher Unity` Package directory in the Unity Project window and select then `Packages -> Tilia Utilities ObjectStateSwitcher Unity -> Runtime -> Prefabs` directory then drag and drop the `Utilities.ObjectStateSwitcher` prefab into the Hierarchy window.
+Expand the `Tilia Utilities ObjectStateSwitcher Unity` package directory in the Unity Project window and select then `Packages -> Tilia Utilities ObjectStateSwitcher Unity -> Runtime -> Prefabs` directory then drag and drop the `Utilities.ObjectStateSwitcher` prefab into the Unity Hierarchy window.
 
 ![Adding Prefab To Scene](assets/images/AddingPrefabToScene.png)
 
@@ -59,6 +59,6 @@ Now unlock the mouse pointer from the Unity Game window by pressing the Lock tog
 
 ![Switch To SpatialSimulator CameraRig](assets/images/SwitchToSpatialSimulatorCameraRig.png)
 
-[Add the Tilia.CameraRigs.TrackedAlias.Unity]: https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/blob/master/Documentation/HowToGuides/AddingATrackedAlias/README.md
+[Add the Tilia.CameraRigs.TrackedAlias.Unity -> CameraRigs.TrackedAlias]: https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/tree/master/Documentation/HowToGuides/AddingATrackedAlias/README.md
 [Install the Tilia.Utilities.ObjectStateSwitcher.Unity]: ../Installation/README.md
 [Unity]: https://unity3d.com/
