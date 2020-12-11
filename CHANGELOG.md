@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.8](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v1.2.7...v1.2.8) (2020-12-11)
+
+#### Bug Fixes
+
+* **HowToGuides:** apply document styling guidelines ([44eb806](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/commit/44eb8064d65e8f8447cf89ad1c11409433cd93e5))
+  > The document style guidelines have been updated and now have been applied to the guides in this repo.
+
 ### [1.2.7](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v1.2.6...v1.2.7) (2020-11-01)
 
 #### Miscellaneous Chores
