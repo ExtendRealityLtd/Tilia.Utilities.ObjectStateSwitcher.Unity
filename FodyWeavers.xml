@@ -2,6 +2,6 @@
 
 <Weavers>
   <Malimbe.FodyRunner>
-    <AssemblyNameRegex>^Tilia</AssemblyNameRegex>
+    <AssemblyNameRegex>^Tilia.Utilities.ObjectStateSwitcher</AssemblyNameRegex>
   </Malimbe.FodyRunner>
 </Weavers>

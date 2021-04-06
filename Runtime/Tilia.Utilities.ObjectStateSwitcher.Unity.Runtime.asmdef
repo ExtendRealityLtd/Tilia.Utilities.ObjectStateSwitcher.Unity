@@ -1,5 +1,5 @@
 {
-    "name": "Tilia.Utility.ObjectStateSwitcher.Unity.Runtime",
+    "name": "Tilia.Utilities.ObjectStateSwitcher.Unity.Runtime",
     "references": [
         "Zinnia.Runtime"
     ],
