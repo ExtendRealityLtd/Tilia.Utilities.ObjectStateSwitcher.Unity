@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v1.2.16...v1.3.0) (2021-04-07)
+
+#### Features
+
+* **Utility:** add prefab creator ([e3f99bd](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/commit/e3f99bd9a92c57816fa425a433ed1524434d34aa))
+  > The latest version of Zinnia has the basis of a prefab creator that can be used to enable easy adding of prefabs to a scene without needing to drag and drop from directories. Instead a new menu item is added for quickly adding prefabs. The guide has been updated to accommodate this and the FodyWeavers.xml is now located in the root to serve both the Runtime and Editor scripts.
+
+#### Bug Fixes
+
+* **package.json:** add missing reference to Editor directory ([a71b91a](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/commit/a71b91aaf6bdaf70f653ac7e344e2585ec900bfd))
+  > The build will fail without referencing this new Editor directory so it has now been added to the package.
+
 ### [1.2.16](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v1.2.15...v1.2.16) (2021-03-29)
 
 #### Miscellaneous Chores
