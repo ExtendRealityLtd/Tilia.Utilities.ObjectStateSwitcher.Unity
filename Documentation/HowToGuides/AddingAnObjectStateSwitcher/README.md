@@ -23,9 +23,7 @@ In this guide, we'll learn how to use the ObjectStateSwitcher prefab to manually
 
 ### Step 1
 
-Expand the `Tilia Utilities ObjectStateSwitcher Unity` package directory in the Unity Project window and select then `Packages -> Tilia Utilities ObjectStateSwitcher Unity -> Runtime -> Prefabs` directory then drag and drop the `Utilities.ObjectStateSwitcher` prefab into the Unity Hierarchy window.
-
-![Adding Prefab To Scene](assets/images/AddingPrefabToScene.png)
+Add a `Utilities.ObjectStateSwitcher` prefab to the Unity project hierarchy by selecting `GameObject -> Tilia -> Prefabs -> Utilities -> Utilities.ObjectStateSwitcher` from the Unity main top menu.
 
 ### Step 2
 
