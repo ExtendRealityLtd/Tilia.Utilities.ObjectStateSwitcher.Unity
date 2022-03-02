@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v1.3.15...v1.4.0) (2022-03-02)
+
+#### Features
+
+* **package.json:** add information urls to package ([6b1a428](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/commit/6b1a42853afc995826ff440b826e9d2844522de1))
+  > The changelog, documentation and license url has been added to the package.json as these are used within the Unity package manager.
+
 ### [1.3.15](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v1.3.14...v1.3.15) (2022-02-14)
 
 #### Miscellaneous Chores
