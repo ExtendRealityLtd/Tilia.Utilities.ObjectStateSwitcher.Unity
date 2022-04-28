@@ -1,12 +1,9 @@
 ﻿namespace Tilia.Utilities.ObjectStateSwitcher
 {
-    using Malimbe.BehaviourStateRequirementMethod;
-    using Malimbe.MemberClearanceMethod;
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using System.Collections.Generic;
     using UnityEngine;
     using UnityEngine.UI;
+    using Zinnia.Extension;
     using Zinnia.Tracking.Modification;
 
     /// <summary>
@@ -14,42 +11,108 @@
     /// </summary>
     public class UIButtonBuilder : MonoBehaviour
     {
+        [Tooltip("The GameObject container of the buttons.")]
+        [SerializeField]
+        private GameObject container;
         /// <summary>
         /// The <see cref="GameObject"/> container of the buttons.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        public GameObject Container { get; set; }
+        public GameObject Container
+        {
+            get
+            {
+                return container;
+            }
+            set
+            {
+                container = value;
+            }
+        }
+        [Tooltip("The RectTransform associated with the container panel.")]
+        [SerializeField]
+        private RectTransform containerRect;
         /// <summary>
         /// The <see cref="RectTransform"/> associated with the container panel.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public RectTransform ContainerRect { get; set; }
+        public RectTransform ContainerRect
+        {
+            get
+            {
+                return containerRect;
+            }
+            set
+            {
+                containerRect = value;
+            }
+        }
+        [Tooltip("The GameObject that holds the source Button for the UI.")]
+        [SerializeField]
+        private GameObject sourceButton;
         /// <summary>
         /// The <see cref="GameObject"/> that holds the source <see cref="Button"/> for the UI.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Cleared]
-        public GameObject SourceButton { get; set; }
+        public GameObject SourceButton
+        {
+            get
+            {
+                return sourceButton;
+            }
+            set
+            {
+                sourceButton = value;
+            }
+        }
+        [Tooltip("The default padding for the final panel height.")]
+        [SerializeField]
+        private float panelHeightPadding = 10f;
         /// <summary>
         /// The default padding for the final panel height.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public float PanelHeightPadding { get; set; } = 10f;
+        public float PanelHeightPadding
+        {
+            get
+            {
+                return panelHeightPadding;
+            }
+            set
+            {
+                panelHeightPadding = value;
+            }
+        }
+        [Tooltip("The default height padding between each button.")]
+        [SerializeField]
+        private float buttonHeightPadding = 5f;
         /// <summary>
         /// The default height padding between each button.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public float ButtonHeightPadding { get; set; } = 5f;
+        public float ButtonHeightPadding
+        {
+            get
+            {
+                return buttonHeightPadding;
+            }
+            set
+            {
+                buttonHeightPadding = value;
+            }
+        }
+        [Tooltip("The state switcher.")]
+        [SerializeField]
+        private GameObjectStateSwitcher switcher;
         /// <summary>
         /// The state switcher.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Cleared]
-        public GameObjectStateSwitcher Switcher { get; set; }
+        public GameObjectStateSwitcher Switcher
+        {
+            get
+            {
+                return switcher;
+            }
+            set
+            {
+                switcher = value;
+            }
+        }
 
         /// <summary>
         /// The prefix to use when creating new button <see cref="GameObject"/>s.
@@ -69,12 +132,55 @@
         protected static Dictionary<string, int> cachedIndexCollection = new Dictionary<string, int>();
 
         /// <summary>
+        /// Clears <see cref="Container"/>.
+        /// </summary>
+        public virtual void ClearContainer()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            Container = default;
+        }
+
+        /// <summary>
+        /// Clears <see cref="SourceButton"/>.
+        /// </summary>
+        public virtual void ClearSourceButton()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            SourceButton = default;
+        }
+
+        /// <summary>
+        /// Clears <see cref="Switcher"/>.
+        /// </summary>
+        public virtual void ClearSwitcher()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            Switcher = default;
+        }
+
+        /// <summary>
         /// Switches the <see cref="Switcher"/> to the given index.
         /// </summary>
         /// <param name="index">The index to switch to.</param>
-        [RequiresBehaviourState]
         public virtual void SwitchTo(int index)
         {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
             Switcher.SwitchTo(index);
             cachedIndexCollection[Switcher.name] = index;
         }
@@ -93,9 +199,13 @@
         /// Switches the <see cref="Switcher"/> to the current cached index.
         /// </summary>
         /// <param name="defaultWhenNoCachedIndex">The index to switch to if no cached index is present.</param>
-        [RequiresBehaviourState]
         public virtual void SwitchToCachedIndex(int defaultWhenNoCachedIndex = 0)
         {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
             SwitchTo(TryGetCachedIndex(out int cachedIndex) ? cachedIndex : defaultWhenNoCachedIndex);
         }
 
@@ -103,10 +213,9 @@
         /// Creates a new UI Button that will enable the given Source.
         /// </summary>
         /// <param name="source">The <see cref="GameObject"/> to enable.</param>
-        [RequiresBehaviourState]
         public virtual void CreateButton(GameObject source)
         {
-            if (!IsValid() || sourceButtons.ContainsKey(source))
+            if (!this.IsValidState() || !IsValid() || sourceButtons.ContainsKey(source))
             {
                 return;
             }

@@ -21,6 +21,9 @@ Manages the drawing of the UI Buttons for the [Switcher] and assigning their act
   * [Switcher]
 * [Methods]
   * [Awake()]
+  * [ClearContainer()]
+  * [ClearSourceButton()]
+  * [ClearSwitcher()]
   * [CreateButton(GameObject)]
   * [DeleteButton(GameObject)]
   * [IsValid()]
@@ -160,6 +163,36 @@ public GameObjectStateSwitcher Switcher { get; set; }
 protected virtual void Awake()
 ```
 
+#### ClearContainer()
+
+Clears [Container].
+
+##### Declaration
+
+```
+public virtual void ClearContainer()
+```
+
+#### ClearSourceButton()
+
+Clears [SourceButton].
+
+##### Declaration
+
+```
+public virtual void ClearSourceButton()
+```
+
+#### ClearSwitcher()
+
+Clears [Switcher].
+
+##### Declaration
+
+```
+public virtual void ClearSwitcher()
+```
+
 #### CreateButton(GameObject)
 
 Creates a new UI Button that will enable the given Source.
@@ -274,6 +307,9 @@ public virtual bool TryGetCachedIndex(out int cachedIndex)
 
 [Switcher]: UIButtonBuilder.md#Switcher
 [Tilia.Utilities.ObjectStateSwitcher]: README.md
+[Container]: UIButtonBuilder.md#Container
+[SourceButton]: UIButtonBuilder.md#SourceButton
+[Switcher]: UIButtonBuilder.md#Switcher
 [Switcher]: UIButtonBuilder.md#Switcher
 [Switcher]: UIButtonBuilder.md#Switcher
 [Inheritance]: #Inheritance
@@ -293,6 +329,9 @@ public virtual bool TryGetCachedIndex(out int cachedIndex)
 [Switcher]: #Switcher
 [Methods]: #Methods
 [Awake()]: #Awake
+[ClearContainer()]: #ClearContainer
+[ClearSourceButton()]: #ClearSourceButton
+[ClearSwitcher()]: #ClearSwitcher
 [CreateButton(GameObject)]: #CreateButtonGameObject
 [DeleteButton(GameObject)]: #DeleteButtonGameObject
 [IsValid()]: #IsValid
