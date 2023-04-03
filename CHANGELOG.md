@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.13](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v2.0.12...v2.0.13) (2023-04-03)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.zinnia.unity from 2.9.0 to 2.10.0 ([b5b99c7](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/commit/b5b99c7a95342e7e65f58b9a62ba865207b28232))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 2.9.0 to 2.10.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v2.9.0...v2.10.0)
+
 ### [2.0.12](https://github.com/ExtendRealityLtd/Tilia.Utilities.ObjectStateSwitcher.Unity/compare/v2.0.11...v2.0.12) (2023-03-28)
 
 #### Miscellaneous Chores
